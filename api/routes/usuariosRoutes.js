@@ -1,8 +1,10 @@
 const { Router } = require('express')
 const UsuarioController = require('../controllers/usuarioController')
-
+const auth = require('../middleware/auth')
 
 const router = Router()
+
+router.use(auth)
 
 router
     .post('/usuarios', UsuarioController.register)
