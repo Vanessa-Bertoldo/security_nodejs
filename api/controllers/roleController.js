@@ -1,6 +1,6 @@
 const RoleService = require('../services/usuarioService')
 
-const roleService = new RoleController()
+const roleService = new RoleService()
 
 class RoleController{
     static async register(req, res){

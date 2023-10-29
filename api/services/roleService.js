@@ -15,7 +15,7 @@ class RoleService{
         }
 
         try{
-            const newRole = database.roles.create({
+            const newRole = await database.roles.create({
                 id: uuid.v4(),
                 nome: dto.nome,
                 descricao: dto.descricao
