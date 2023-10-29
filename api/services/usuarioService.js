@@ -53,8 +53,8 @@ class UsuarioService{
     async updateUser(dto){
         const usuario = await this.searchUsersById(dto.id)
         try{
-            usuario.nome = dto.nome
-            usuario.email = dto.email
+            usuario.nome    = dto.nome
+            usuario.email   = dto.email
             await usuario.save()
             return usuario
         } catch(e){
