@@ -1,4 +1,4 @@
-const RoleService = require('../services/usuarioService')
+const RoleService = require('../services/roleService')
 
 const roleService = new RoleService()
 

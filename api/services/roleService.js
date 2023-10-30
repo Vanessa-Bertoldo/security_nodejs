@@ -4,7 +4,7 @@ const uuid = require('uuid')
 
 class RoleService{
     async register(dto){
-        const role = await database.role.findOne({
+        const role = await database.roles.findOne({
             where: {
                 nome: dto.nome
             }
@@ -26,12 +26,12 @@ class RoleService{
         }
     }
 
-    static async searchAllRoles(){
+    async searchAllRoles(){
         const roles = await database.roles.findAll();
         return roles
     }
 
-    static async searchRoleById(id){
+    async searchRoleById(id){
         const role = await database.roles.findOne({
             where: {
                 id: id
@@ -45,7 +45,7 @@ class RoleService{
         return role
     }
 
-    static async updateRoleById(dto){
+    async updateRoleById(dto){
         const role = await database.roles.findOne({
             where: {
                 id: dto.id
@@ -66,7 +66,7 @@ class RoleService{
         }
     }
 
-    static async deleteRoleById(id){
+    async deleteRoleById(id){
         const role = await database.roles.findOne({
             where: {
                 id: id
