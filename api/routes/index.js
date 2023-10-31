@@ -4,7 +4,7 @@ const produto     = require('./produtoRoute')
 const usuario     = require('./usuariosRoutes')
 const auth        = require('./authRoute')
 const role        = require('./roleRoute')
-const permissiao  = require('./permissaoRoute')
+const permissao  = require('./permissaoRoute')
 const seguranca   = require('./seguranca')
 
 module.exports = app => {
@@ -14,7 +14,7 @@ module.exports = app => {
     usuario,
     produto,
     role, 
-    permissiao,
+    permissao,
     seguranca
   )
 }
