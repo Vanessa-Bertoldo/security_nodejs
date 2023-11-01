@@ -10,7 +10,7 @@ router.use(auth)
 
 router
     .post('/usuarios', UsuarioController.register)
-    .get('/usuarios', permissoes(["admin"]), UsuarioController.searchAllUsers)
+    .get('/usuarios',permissoes(["admin"]), UsuarioController.searchAllUsers)
     .get('/usuarios/id/:id', UsuarioController.searchUsersById)
     .put('/usuarios/id/:id', UsuarioController.updateUser)
     .delete('/usuarios/id/:id', UsuarioController.deleteUser)
