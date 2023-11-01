@@ -25,8 +25,10 @@ class UsuarioController{
 
     static async searchUsersById(req, res){
         try{
-            const {id} = req.params
+            const { id } = req.params
             const usuario = await usuarioService.searchUsersById(id)
+
+            res.status(200).json(usuario)
         } catch(e){
             res.status(400).send({message: e.message})
         }

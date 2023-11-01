@@ -28,7 +28,7 @@ class SegurancaController{
                 permissoes
             })
 
-            resstatus(201).send(permissaoRole)
+            res.status(201).send(permissaoRole)
         } catch(e){
             res.status(400).send({ message: e.message })
         }
