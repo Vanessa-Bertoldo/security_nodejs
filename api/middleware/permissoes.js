@@ -3,7 +3,7 @@ const database = require('../models')
 const permissoes = (listaPermissoes) => {
     return async (req, res, next) => {
         const { usuarioId } = req
-        console.log("usuarioId ", usuarioId)
+        console.log("usuarioId ", usuarioId) //retorno undefined
         const usuario = await database.usuarios.findOne({
             include: [
                 {
