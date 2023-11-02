@@ -3,7 +3,7 @@ const Sequelize     = require('sequelize')
 
 const permissoesRoles = (listaPermissoes) => {
     return async (req, res, next) => {
-        const { usuarioId } = req 
+        const { userId } = req
         const usuario = await database.usuarios.findOne({
             include: [
                 {
@@ -13,7 +13,7 @@ const permissoesRoles = (listaPermissoes) => {
                 }
             ],
             where: {
-                id: usuarioId
+                id: userId
             }
         })
 

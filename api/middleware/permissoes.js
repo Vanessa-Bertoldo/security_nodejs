@@ -2,8 +2,7 @@ const database = require('../models')
 
 const permissoes = (listaPermissoes) => {
     return async (req, res, next) => {
-        const { usuarioId } = req
-        console.log("usuarioId ", usuarioId) //retorno undefined
+        const { userId } = req
         const usuario = await database.usuarios.findOne({
             include: [
                 {
@@ -13,10 +12,9 @@ const permissoes = (listaPermissoes) => {
                 }
             ],
             where: {
-                id: usuarioId
+                id: userId
             }
         })
-        console.log("usuario ", usuario)
 
         if (!usuario) {
             return res.status(401).send('Usuario não cadastrado')
