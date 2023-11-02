@@ -7,7 +7,7 @@ const permissoesRoles   = require('../middleware/permissoesRoles')
 const router = Router()
 
 router
-  .post('/produto',  ProdutoController.cadastrarProduto)
+  .post('/produto', roles(["gerente"]),  ProdutoController.cadastrarProduto)
   .get('/produto', ProdutoController.buscarTodosProdutos)
   .get('/produto/id/:id', ProdutoController.buscarProdutoPorId)
   .delete('/produto/id/:id', ProdutoController.deletarProdutoPorId)

@@ -58,6 +58,14 @@ The generated token will be used to access other routes.
 Follow the same example as user registration to enter the products, rules and permissions according to your routes.
 see the project's "routes" file. Each route has all crud methods.
 
+To insert the permissions and rules created on the routes, follow the example below. 
+Don't forget to use the token to validate your user.
+
+```bash
+    router
+    .post('/produto', roles(["gerente"]), permissoes(["editar"]), ProdutoController.cadastrarProduto)
+```  
+
 ### Contact
 
 For questions please contact
