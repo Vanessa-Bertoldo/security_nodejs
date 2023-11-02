@@ -23,12 +23,12 @@ class UsuarioService{
                 email: dto.email,
                 senha: senhaHash
             })
+
+            return novoUsuario
         } catch(e){
             throw new Error("Erro ao cadastrar usuario")
         }
-
-
-        return novoUsuario
+        
     }
 
     async searchAllUsers() {

@@ -9,10 +9,10 @@ class UsuarioController{
         try{
             const usuario = await usuarioService.register({nome, email, senha})
 
-            res.status(201).send(usuario)
+            return res.status(201).send(usuario)
 
         } catch (e) {
-            res.status(400).send({message: e.message})
+            return res.status(400).send({message: e.message})
         }
 
        
@@ -20,7 +20,7 @@ class UsuarioController{
 
     static async searchAllUsers(req, res) {
         const usuarios = await usuarioService.searchAllUsers()
-        res.status(200).json(usuarios)
+        return res.status(200).json(usuarios)
     }
 
     static async searchUsersById(req, res){
@@ -28,9 +28,9 @@ class UsuarioController{
             const { id } = req.params
             const usuario = await usuarioService.searchUsersById(id)
 
-            res.status(200).json(usuario)
+            return res.status(200).json(usuario)
         } catch(e){
-            res.status(400).send({message: e.message})
+            return res.status(400).send({message: e.message})
         }
     }
 
