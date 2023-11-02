@@ -14,7 +14,7 @@
 ### Create database 
 
 ```bash
-$ create database security_nodejs_development;
+    $ create database security_nodejs_development;
 
 ```
 
@@ -23,7 +23,7 @@ $ create database security_nodejs_development;
 Clone this repository and install the dependencies
 
 ```bash
-$ npm install
+    $ npm install
 ```
 
 Install CLI Sequelize with mysql2 or other database
