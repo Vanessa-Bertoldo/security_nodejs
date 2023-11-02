@@ -24,9 +24,17 @@ Clone this repository and install the dependencies
 
 ```bash
 $ npm install
-
 ```
 
+Install CLI Sequelize with mysql2 or other database ()
+```bash
+    $ npm install sequelize mysql2
+```
+
+Run the migrates
+```bash
+    $ sequelize db:migrate
+```
 ### Authentication
 
 ### Endpoints
